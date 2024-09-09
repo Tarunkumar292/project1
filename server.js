@@ -35,10 +35,10 @@ app.use('/uploads', express.static('uploads'));
 // Configure Multer for file uploads
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, 'uploads/');  // Ensure the 'uploads' folder exists
+        cb(null, 'uploads/'); 
     },
     filename: (req, file, cb) => {
-        cb(null, Date.now() + path.extname(file.originalname));  // Generate unique filenames
+        cb(null, Date.now() + path.extname(file.originalname));  
     }
 });
 
